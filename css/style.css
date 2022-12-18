@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@500&family=Montserrat:wght@100;300;400&display=swap');
+
+:root {
+    --darkest: #233142;
+    --dark-primary: #132743;
+    --dark-secondary: #407088;
+    --light-primary: #ffb5b5;
+    --light-secondary: #ffcbcb;
+    --red: #f95959;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    /* background-color: var(--dark-primary);
+    color: var(--light-secondary); */
+}
+
+header {
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: black
+}
+
+#new-task-form {
+    display: flex;
+}
+
+input,
+button {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+#new-task-input {
+    flex: 0.7 1 0%;
+    background-color: var(--darkest);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    font-size: 1rem;
+    color: var(--light-secondary);
+}
+
+#new-task-input::placeholder {
+    color: var(--light-secondary);
+}
+
+#new-task-submit {
+    color: var(--light-primary);
+    font-size: 1.25rem;
+}
+
+#new-task-submit:hover {
+    opacity: 0.8;
+    color: black;
+}
+
+#new-task-submit:active {
+    opacity: 0.5;
+}
+
+main {
+    flex: 1 1 0%;
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* .task-list {
+    padding: 1rem;
+} */
+
+.task-list h2 {
+    font-size: 1.5rem;
+    font-weight: 580;
+    color: black;
+    margin-bottom: 1rem;
+}
+
+#tasks .task {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--darkest);
+    padding: 0.7rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.task .content {
+    flex: 1 1 0%;
+}
+
+.task .content .text {
+    color: var(--light-secondary);
+    font-size: 1rem;
+    display: block;
+}
+
+.actions button {
+    color: var(--light-primary);
+    font-size: 1.25rem;
+}
+
+.actions button:hover {
+    opacity: 0.8;
+}
+
+.actions button:active {
+    opacity: 0.5;
+}
+
+.task .actions .delete {
+    color: var(--red);
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
