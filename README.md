@@ -1,5 +1,4 @@
-# TXON internship - Web Development
-## Task 3 - To Do List
+# To Do List
 #### Language used : HTML, CSS, Javascript
 #### IDE: Microsoft Visual Studio code
 
